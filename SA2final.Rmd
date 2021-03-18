@@ -1,0 +1,60 @@
+---
+title: "SA2_final"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+## Grading for Skills Application 2
+
+I will grade both the code and your notes for this assignment. I will give you fewer instructions compared to Skills Application 1 so you will have to fill out this document as though it were your lab notebook. Be sure to include: 
+1) why are you running the code?, 
+2) where can you find the file(s) you are executing in the command line?
+3) are there notes you would find useful in the future to get to this step that you might forget?, 
+4) did you run into trouble on this step? If so, what was the trouble? How did you get around it (even if it's emailing Dr. Schwarz you can write that and then describe what we did to fix it).
+
+If you have to type a line of code to do anything, you should include both comments and the line of code itself. I will deduct points for lack of clarity in notes and I will deduct points for missing steps. 
+
+Remember, you can always ask for my help with these assignments. The goal is to teach you new skills - not to totally stump you.
+
+## Instructions for Skills Application 2
+
+Using this document follow the directions and be sure to include your code as you go similar to my pwd example above. You will ultimately push this R Markdown document to the GitHub assignment found at<>. I will grade the R Markdown document from the GitHub page so be sure you put your notes and code in this document and push your changes to github when you're done.
+
+## Including Unix code in R Markdown documents
+
+You will utilize a combination of Unix and R in this skills application. Therefore, you'll need to know how to include Unix code in R Markdown. See example below:
+
+```{bash}
+pwd
+```
+
+## General Unix Skills
+1. Accept the assignment from the GitHub Classroom
+2. Use a pipe to figure out how many sequences are in the files contam.fastq and contaminated.fastq
+3. Print out all components of example.txt that do not match entirely the word "bioinfo"
+4. Use a pipe to figure out how many Olfr genes are in Mus_musculus.GRCm38.75_chr1_genes.txt
+5. Sort example.bed by chromosome and save to a new file called example_sorted.bed
+6. Do the same thing with Mus_musculus.GRCm38.75_chr1_random.gtf to a similarly named output file
+
+## Bioconductor skills
+7. Install and load the Bioconductor packages GenomicFeatures and TxDb.Mmusculus.UCSC.mm10.ensGene
+8. Reassign the TxDb.Mmusculus.UCSC.mm10.ensGene to a new variable to make typing it over and over again less tedious
+9. Save all the genes from TxDb.Mmusculus.UCSC.mm10.ensGene to a variable called mm_genes
+10. Look for transcripts that overlap with the region 123260562-123557264 plus 1000 base pairs
+11. Using rtracklayer's import() function import Mus_musculus.GRCm38.75_chr1.gtf.gz to mm_gtf
+12. print out the column names that were automatically created when you imported the data
+13. Find all protein coding genes from mm_gtf
+14. Extract promoter regions two different ways: 1) using flank(), and 2) using promoters()
+15. Compare the two results using identical()
+
+## GitHub skills
+16. Be sure to save this R Markdown document with your commentary and coding (very important to include both) and push the document to your assignment repository. If you aren't sure if I can see it on my end, just email me and ask. 
